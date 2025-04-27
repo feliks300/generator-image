@@ -17,7 +17,7 @@ if not os.path.exists(GENERATED_IMAGES_DIR):
     os.makedirs(GENERATED_IMAGES_DIR)
 
 # Load the Stable Diffusion model with increased timeout
-model_id = "runwayml/stable-diffusion-v1-5"
+model_id = "stabilityai/stable-diffusion-2-1-base"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16, timeout=600)  # Увеличиваем тайм-аут до 600 секунд
 # pipe = pipe.to("cuda")
 
